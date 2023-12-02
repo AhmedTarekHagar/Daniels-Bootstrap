@@ -1,0 +1,568 @@
+/*#region ***** PUBLIC ***** */
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, h1 a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --main-color: #fff;
+    --main-color-dark: #000;
+}
+
+a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.heading h2 {
+    z-index: 0;
+}
+
+.heading h2::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    bottom: 0;
+    z-index: -999;
+    background-image: url('../images/dots.png');
+
+}
+
+#backToTop {
+    right: 2rem;
+    bottom: 2rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--main-color-dark);
+    color: var(--main-color);
+}
+
+/*#endregion*/
+
+/*#region ***** NAVBAR ***** */
+
+#navbar .nav-link {
+    color: var(--main-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--main-color);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--main-color);
+}
+
+.nav-link::before {
+    content: "";
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    height: 2px;
+    width: 100%;
+    transition: all 1s;
+}
+
+.navbar-nav .nav-link.active::before {
+    left: 0;
+}
+
+.navbar-toggler {
+    border-color: var(--main-color);
+    color: var(--main-color);
+}
+
+.navbar-toggler-icon {
+    color: var(--main-color);
+}
+
+#navbar:has(.navbar-nav .first-nav-item a:not(.active)) {
+    background-color: var(--main-color) !important;
+    padding-top: .5rem !important;
+    padding-bottom: .5rem !important;
+    z-index: 999999999;
+
+    & a {
+        color: var(--main-color-dark) !important;
+    }
+
+    & a::before {
+        background-color: var(--main-color-dark);
+    }
+}
+
+/*#endregion*/
+
+/*#region ***** Header ***** */
+
+#header {
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#header span::before {
+    content: "";
+    animation: typingAnimation 8s infinite;
+}
+
+@keyframes typingAnimation {
+    0% {
+        content: "|";
+    }
+
+    1.5% {
+        content: "A|";
+    }
+
+    3% {
+        content: "Ah|";
+    }
+
+    4.5% {
+        content: "Ahm|";
+    }
+
+    6% {
+        content: "Ahme|";
+    }
+
+    7.5% {
+        content: "Ahmed|";
+    }
+
+    9% {
+        content: "Ahmed |";
+    }
+
+    10.5% {
+        content: "Ahmed T|";
+    }
+
+    12% {
+        content: "Ahmed Ta|";
+    }
+
+    13.5% {
+        content: "Ahmed Tar|";
+    }
+
+    15% {
+        content: "Ahmed Tare|";
+    }
+
+    16.5% {
+        content: "Ahmed Tarek|";
+    }
+
+    18% {
+        content: "Ahmed Tare|";
+    }
+
+    19.5% {
+        content: "Ahmed Tar|";
+    }
+
+    21% {
+        content: "Ahmed Ta|";
+    }
+
+    22.5% {
+        content: "Ahmed T|";
+    }
+
+    24% {
+        content: "Ahmed |";
+    }
+
+    25.5% {
+        content: "Ahmed|";
+    }
+
+    27% {
+        content: "Ahme|";
+    }
+
+    28.5% {
+        content: "Ahm|";
+    }
+
+    30% {
+        content: "Ah|";
+    }
+
+    31.5% {
+        content: "A|";
+    }
+
+    33% {
+        content: "|";
+    }
+
+    34.5% {
+        content: "D|";
+    }
+
+    36% {
+        content: "De|";
+    }
+
+    37.5% {
+        content: "Dev|";
+    }
+
+    39% {
+        content: "Deve|";
+    }
+
+    40.5% {
+        content: "Devel|";
+    }
+
+    42% {
+        content: "Develo|";
+    }
+
+    43.5% {
+        content: "Develop|";
+    }
+
+    45% {
+        content: "Develope|";
+    }
+
+    46.5% {
+        content: "Developer|";
+    }
+
+    48% {
+        content: "Develope|";
+    }
+
+    49.5% {
+        content: "Develop|";
+    }
+
+    51% {
+        content: "Develo|";
+    }
+
+    52.5% {
+        content: "Devel|";
+    }
+
+    54% {
+        content: "Deve|";
+    }
+
+    55.5% {
+        content: "Dev|";
+    }
+
+    57% {
+        content: "De|";
+    }
+
+    58.5% {
+        content: "D|";
+    }
+
+    60% {
+        content: "|";
+    }
+
+    61.5% {
+        content: "D|";
+    }
+
+    63% {
+        content: "De|";
+    }
+
+    64.5% {
+        content: "Des|";
+    }
+
+    66% {
+        content: "Desi|";
+    }
+
+    67.5% {
+        content: "Desig|";
+    }
+
+    69% {
+        content: "Design|";
+    }
+
+    70.5% {
+        content: "Designe|";
+    }
+
+    72% {
+        content: "Designer|";
+    }
+
+    73.5% {
+        content: "Designe|";
+    }
+
+    75% {
+        content: "Design|";
+    }
+
+    76.5% {
+        content: "Desig|";
+    }
+
+    78% {
+        content: "Desi|";
+    }
+
+    79.5% {
+        content: "Des|";
+    }
+
+    81% {
+        content: "De|";
+    }
+
+    82.5% {
+        content: "D|";
+    }
+
+    100% {
+        content: "|";
+    }
+}
+
+/*#endregion*/
+
+/*#region ***** ABOUT ***** */
+
+#about .progress {
+    height: 2rem;
+    box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, .2);
+}
+
+#about .image {
+    z-index: 16;
+}
+
+#about .image::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    z-index: -15;
+    left: -5%;
+    bottom: -5%;
+    background-image: url('../images/dots.png');
+}
+
+#about .btn-dark {
+    color: var(--main-color);
+    background-color: var(--main-color-dark);
+}
+
+#about .btn-dark:hover {
+    color: var(--main-color-dark);
+    background-color: var(--main-color);
+}
+
+#about .btn-outline-light:hover {
+    color: var(--main-color) !important;
+    background-color: var(--main-color-dark);
+}
+
+/*#endregion*/
+
+/*#region ***** SERVICES ***** */
+
+#services .item i {
+    width: 5rem;
+    height: 5rem;
+    background-color: #F8F9FA;
+    vertical-align: middle;
+    transition: all .5s;
+}
+
+#services .item:hover i {
+    background-color: var(--main-color-dark);
+    color: var(--main-color);
+}
+
+/*#endregion*/
+
+/*#region ***** WORKS ***** */
+
+#works .nav-link {
+    color: var(--main-color-dark);
+    background-color: transparent;
+    overflow: hidden;
+}
+
+#works .nav-link::before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--main-color-dark);
+    bottom: 0;
+    left: -100%;
+}
+
+#works .nav-link.active::before
+ {
+    left: 0;
+}
+
+#works .card .layer {
+    right: 1.5%;
+    top: 1.5%;
+    left: 1.5%;
+    bottom: 1.5%;
+    background-color: #fff;
+    opacity: 0;
+    transition: all .5s;
+}
+
+#works .card .layer i {
+    background-color: var(--main-color-dark);
+    width: 2rem;
+    height: 2rem;
+    color: var(--main-color);
+    border: 2px solid var(--main-color-dark);
+    transition: all .5s;
+}
+
+#works .card .layer h6 {
+    transform: translateY(-100%);
+    transition: all .5s;
+}
+
+#works .card .layer .icons {
+    transform: translateY(100%);
+    transition: all .5s;
+}
+
+#works .card .layer i:hover {
+    background-color: var(--main-color);
+    color: var(--main-color-dark);
+    cursor: pointer;
+}
+
+#works .card .layer:hover {
+    opacity: 1;
+    & h6, .icons {
+        transform: translateY(0);
+    }
+}
+
+/*#endregion*/
+
+/*#region ***** CLIENTS ***** */
+
+#clients .carousel-indicators button {
+    width: .75rem;
+    height:.75rem;
+    border-radius: 50%;
+    background-color: #869791;
+    margin: 0 .5rem;
+}
+
+/*#endregion*/
+
+/*#region ***** TEAM ***** */
+
+#team .card {
+    border-radius: 0 0 10px 10px;
+}
+
+#team .layer {
+    left: 1.5%;
+    right: 1.5%;
+    bottom: 1.5%;
+    top: 1.5%;
+    background-color: var(--main-color);
+    transform: rotatey(180deg) scale(.5);
+    opacity: 0;
+    transition: all .5s;
+}
+
+#team a {
+    border: 3px solid var(--main-color-dark);
+    background-color: var(--main-color-dark);
+    color: var(--main-color);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    transition: all .5s;
+}
+
+#team a:hover {
+    background-color: var(--main-color);
+    color: var(--main-color-dark);
+}
+
+#team .card:hover .layer {
+    transform: rotateY(0) scale(1);
+    opacity: .8;
+}
+
+#team img {
+    transform: scale(1);
+    transition: all .5s;
+}
+
+#team .image:hover img {
+    transform: scale(1.2);
+}
+
+/*#endregion*/
+
+/*#region ***** CONTACT ***** */
+
+#contact i {
+    width: 4rem;
+    height: 4rem; 
+    transition: all .5s; 
+}
+
+#contact i:hover {
+    background-color: var(--main-color-dark) !important;
+    color: var(--main-color);  
+}
+
+#contact .form-control {
+    border: none;
+}
+
+#contact .form-control:focus {
+    box-shadow: none;
+}
+
+#contact .btn-dark {
+    color: var(--main-color);
+    background-color: var(--main-color-dark);
+}
+
+#contact .btn-dark:hover {
+    color: var(--main-color-dark);
+    background-color: var(--main-color);
+}
+
+/*#endregion*/
