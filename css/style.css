@@ -8,6 +8,7 @@
 
 * {
     font-family: 'Poppins', sans-serif;
+    -ms-ime-align: unset !important;
 }
 
 h1,
