@@ -1,5 +1,11 @@
 /*#region ***** PUBLIC ***** */
 
+@supports (-ms-ime-align: auto) {
+    * {
+      -ms-ime-align: unset !important;
+    }
+  }
+
 * {
     font-family: 'Poppins', sans-serif;
 }
