@@ -2,15 +2,21 @@
 
 @supports (-ms-ime-align: auto) {
     * {
-      -ms-ime-align: unset !important;
+        -ms-ime-align: unset !important;
     }
-  }
+}
 
 * {
     font-family: 'Poppins', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, h1 a {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 a {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -431,8 +437,7 @@ ul {
     left: -100%;
 }
 
-#works .nav-link.active::before
- {
+#works .nav-link.active::before {
     left: 0;
 }
 
@@ -473,7 +478,9 @@ ul {
 
 #works .card .layer:hover {
     opacity: 1;
-    & h6, .icons {
+
+    & h6,
+    .icons {
         transform: translateY(0);
     }
 }
@@ -484,7 +491,7 @@ ul {
 
 #clients .carousel-indicators button {
     width: .75rem;
-    height:.75rem;
+    height: .75rem;
     border-radius: 50%;
     background-color: #869791;
     margin: 0 .5rem;
@@ -544,13 +551,13 @@ ul {
 
 #contact i {
     width: 4rem;
-    height: 4rem; 
-    transition: all .5s; 
+    height: 4rem;
+    transition: all .5s;
 }
 
 #contact i:hover {
     background-color: var(--main-color-dark) !important;
-    color: var(--main-color);  
+    color: var(--main-color);
 }
 
 #contact .form-control {
